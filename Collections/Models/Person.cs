@@ -13,9 +13,10 @@ namespace Collections.Models
             this.Name = name;
             this.Description = description;
             this.Address = new Address(street, number);
+            this.Id = Guid.NewGuid();
         }
 
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Address Address { get; set; }

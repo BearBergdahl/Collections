@@ -8,5 +8,8 @@ namespace Collections.Models
 {
     internal class ScoreCard
     {
+        public Guid PersonId {  get; set; }
+        public int CompetitionId { get; set; }
+        public int Score { get; set; }
     }
 }
