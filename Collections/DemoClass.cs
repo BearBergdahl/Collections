@@ -39,13 +39,13 @@ namespace Collections
             Competition competition = new Competition
             {
                 CompetitionId = 1,
-                Name = "CompetetsCup",
+                Name = "CompetersCup",
                 Description = "Hitting ball least times competition.",
                 Winner = null,
                 Participants = butWhatHappensIf
             };
             competition.Participants.Add(new ScoreCard { CompetitionId = 1, PersonId = Guid.NewGuid(), Score =  99 });
-            competition.Participants.Add(new Competition { CompetitionId = 2, Description = "Running Donkeys quickly around a track", Name = "Donkeyrun", Participants = null, Winner = new Person("Ior", "Depressed donkey", "SevenStrides forrest", 1) });
+            competition.Participants.Add(new Competition { CompetitionId = 2, Description = "Running Donkeys quickly around a track", Name = "Donkeyrun", Participants = null, Winner = new Person("Ior", "Depressed donkey", "SevenStrides forest", 1) });
             competition.Participants.AddRange(new ArrayList{1,3,6});
             Console.WriteLine("How do we loop throug this...");
             foreach (var maybePerson in competition.Participants)
@@ -64,7 +64,7 @@ namespace Collections
             competition.Participants = null; // Add your names
             competition.CompetitionId = 1;
             competition.Winner = null; //add person
-            Console.WriteLine("Skriv ett enkelt konsol eller WPF-program som skapar en tävling, låter användaren ange namn mm och sedan lägger till tävlande.");
+            Console.WriteLine("Skriv ett enkelt konsol-program som skapar en tävling, låter användaren ange namn mm och sedan lägger till tävlande.");
             Console.WriteLine("När deltagare är klara, skapa upp scorecards för varje deltagare i ett nytt attribut i tävlingen. Ta bort vinnare som ett attribut på tävling och välj istället ut en vinnare baserad på deltagarnas scorecards.");
             Console.WriteLine("Presentera en lista med deltagarna i sorterade iordning efter poäng på deras scorecard. (välj själv vad man vinner på. Endast Arrayer & ArrayList får användas!");
         }
